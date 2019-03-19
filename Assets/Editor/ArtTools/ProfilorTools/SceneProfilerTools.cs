@@ -13,12 +13,12 @@ using EN_SceneManagement = UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SceneProfilorTools : EditorWindow
+public class SceneProfilerTools : EditorWindow
 {
     [MenuItem("Tools/分析工具/场景性能分析工具")]
     private static void Show_Profiler_Scene()
     {
-        SceneProfilorTools window = (SceneProfilorTools)EditorWindow.GetWindowWithRect(typeof(SceneProfilorTools), new Rect(0, 0, 550, 1000), true, "SceneTools v1.0");
+        SceneProfilerTools window = (SceneProfilerTools)EditorWindow.GetWindowWithRect(typeof(SceneProfilerTools), new Rect(0, 0, 550, 1000), true, "SceneTools v1.0");
         window.Show();
     }
 

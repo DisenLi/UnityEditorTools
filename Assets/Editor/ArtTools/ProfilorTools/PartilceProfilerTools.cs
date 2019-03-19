@@ -11,17 +11,17 @@ using UnityEditor;
 
 using System.Collections.Generic;
 
-public class PartilceProfilorTools : EditorWindow
+public class PartilceProfilerTools : EditorWindow
 {
 
-    private static PartilceProfilorTools window = null;
+    private static PartilceProfilerTools window = null;
     [MenuItem("Tools/分析工具/粒子分析工具")]
     private static void Show_Profiler_Particle()
     {
         if (window == null)
         {
             Rect rect = new Rect(0, 0, 550, 800);
-            window = (PartilceProfilorTools)EditorWindow.GetWindow(typeof(PartilceProfilorTools));
+            window = (PartilceProfilerTools)EditorWindow.GetWindow(typeof(PartilceProfilerTools));
             window.minSize = new Vector2(rect.width, rect.height);
             window.maxSize = new Vector2(rect.width, rect.height);
         }
@@ -33,7 +33,7 @@ public class PartilceProfilorTools : EditorWindow
     {
         if (window == null)
         {
-            window = (PartilceProfilorTools)EditorWindow.GetWindow(typeof(PartilceProfilorTools), false, "ParticleTools v1.0");
+            window = (PartilceProfilerTools)EditorWindow.GetWindow(typeof(PartilceProfilerTools), false, "ParticleTools v1.0");
         }
         window.Init();
         window.Show();
@@ -344,7 +344,7 @@ public class PartilceProfilorTools : EditorWindow
     Vector2 mesh_scroll_view_vec2 = Vector2.zero;
     Vector2 particle_scroll_view_vec2 = Vector2.zero;
 
-    ParticleSystemProfilor particle_mono_profilor = null;
+    ParticleSystemProfiler particle_mono_profilor = null;
 
     void OnGUI()
     {
@@ -514,7 +514,7 @@ public class PartilceProfilorTools : EditorWindow
                     {
                         ps_arr[i] = particle_info.single_particle_list[i].ps;
                     }
-                    particle_mono_profilor = ParticleSystemProfilor.Create(particle_info.single_gobj, ps_arr);
+                    particle_mono_profilor = ParticleSystemProfiler.Create(particle_info.single_gobj, ps_arr);
                     window.Repaint();
                 }
             }

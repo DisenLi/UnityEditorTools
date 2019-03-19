@@ -2,9 +2,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ParticleSystemProfilor : MonoBehaviour
+public class ParticleSystemProfiler : MonoBehaviour
 {
-    private static ParticleSystemProfilor instance = null;
+    private static ParticleSystemProfiler instance = null;
 
     public GameObject root_gobj;
     public ParticleSystem[] m_ParticleSystems;
@@ -16,7 +16,7 @@ public class ParticleSystemProfilor : MonoBehaviour
     public string[] ps_name_arr = null;
     public int[] ps_count_arr = null;
 
-    public static ParticleSystemProfilor Create(GameObject ps_gobj, ParticleSystem[] ps_arr)
+    public static ParticleSystemProfiler Create(GameObject ps_gobj, ParticleSystem[] ps_arr)
     {
         if (instance != null)
         {
@@ -24,7 +24,7 @@ public class ParticleSystemProfilor : MonoBehaviour
         }
 
         GameObject gobj = new GameObject("particlesystem_profilor");
-        ParticleSystemProfilor psp = gobj.AddComponent<ParticleSystemProfilor>();
+        ParticleSystemProfiler psp = gobj.AddComponent<ParticleSystemProfiler>();
         psp.root_gobj = ps_gobj;
         psp.m_ParticleSystems = ps_arr;
 
