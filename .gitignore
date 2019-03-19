@@ -1,0 +1,13 @@
+/Temp/
+/Library/
+/obj/
+/Build*/
+/.vs/
+
+.DS_Store
+*.pyc
+\~\$*.xlsx
+
+/*.sln
+/*.csproj
+/*.userprefs
